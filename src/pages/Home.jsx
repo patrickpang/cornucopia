@@ -12,8 +12,10 @@ import Nav from '../components/Nav'
 import { games } from '../helpers/games'
 import Caption from '../components/Caption'
 import Frame from '../components/Frame'
+import { navigate } from '@reach/router'
+import BasicLink from '../components/BasicLink'
 
-const Section = ({ heading, items, padding }) => (
+const Section = ({ heading, items, padding, itemLinkPrefix = '/' }) => (
   <div>
     <Row>
       <h2
@@ -24,11 +26,11 @@ const Section = ({ heading, items, padding }) => (
         {heading}
       </h2>
       <Row>
-        <div>MORE</div>
+        <BasicLink to={itemLinkPrefix}>MORE</BasicLink>
         <Icon>keyboard_arrow_right</Icon>
       </Row>
     </Row>
-    <CardsRow items={items} padding={padding} />
+    <CardsRow items={items} padding={padding} onCardClick={id => navigate(itemLinkPrefix + id)} />
   </div>
 )
 
@@ -42,8 +44,13 @@ const Home = () => (
       <HeaderBanner />
       <SearchBar />
       <Main>
-        <Section heading="Shopping" items={Object.values(products)} />
-        <Section heading="Entertainment" items={Object.values(games)} padding={false} />
+        <Section heading="Shopping" items={Object.values(products)} itemLinkPrefix="/products/" />
+        <Section
+          heading="Entertainment"
+          items={Object.values(games)}
+          itemLinkPrefix="/games/"
+          padding={false}
+        />
       </Main>
       <Nav />
     </Frame>

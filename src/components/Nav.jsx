@@ -26,9 +26,9 @@ const Nav = () => (
         padding: 16px 32px;
       `}
     >
-      <NavButton to="/games" icon="videogame_asset" align="left" />
+      <NavButton to="/games/" icon="videogame_asset" align="left" />
       <NavButton to="/" icon="home" />
-      <NavButton to="/shop" icon="shopping_cart" align="right" />
+      <NavButton to="/products/" icon="shopping_cart" align="right" />
     </Row>
   </div>
 )

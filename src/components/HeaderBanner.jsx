@@ -3,14 +3,16 @@ import Header from './Header'
 import Icon from './Icon'
 import { css } from 'react-emotion'
 import Row from './Row'
+import { navigate } from '@reach/router'
 
 const HeaderBanner = () => (
   <div
+    onClick={() => navigate('/profile')}
     className={css`
-      background: url(images/singapore.jpg);
-      background-size: contain;
+      background: url(/images/singapore.jpg);
       background-size: cover;
       color: white;
+      cursor: pointer;
 
       display: flex;
       flex-direction: column;

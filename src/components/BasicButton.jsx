@@ -9,6 +9,7 @@ const BasicButton = styled('button')`
   border: none;
   background: none;
   outline: none;
+  cursor: pointer;
 `
 
 export default BasicButton

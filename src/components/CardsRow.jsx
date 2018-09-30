@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from 'react-emotion'
 import Card from './Card'
 
-const CardsRow = ({ items, padding }) => (
+const CardsRow = ({ items, padding, onCardClick = () => null }) => (
   <div
     className={css`
       display: flex;
@@ -25,6 +25,7 @@ const CardsRow = ({ items, padding }) => (
           width: 120px;
         `}
         padding={padding}
+        onClick={onCardClick}
       />
     ))}
   </div>
