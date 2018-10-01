@@ -1,5 +1,6 @@
 import React from 'react'
 import { css, cx } from 'react-emotion'
+import BasicImage from './BasicImage'
 
 const Card = ({
   item: { id, name, cover, dollars, miles },
@@ -22,9 +23,8 @@ const Card = ({
       `
     )}
   >
-    <img
+    <BasicImage
       className={css`
-        width: 100%;
         border-radius: ${padding ? 0 : '12px 12px 0 0'};
       `}
       src={cover}

@@ -6,8 +6,9 @@ const Caption = styled('div')`
   }
 
   @media screen and (orientation: landscape) {
+    box-sizing: border-box;
     padding-top: 32px;
-    height: 200px;
+    height: 250px;
   }
 `
 

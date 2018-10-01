@@ -3,7 +3,7 @@ export const products = {
     id: '1',
     name: 'Monopoly: Singapore Airlines Edition',
     description:
-      'Monopoly and Singapore Airlines have teamed up to create an exclusive travel-sized version of the world’s most loved family board game. Enjoy your flight with us and have fun in a game of Monopoly: Singapore Airlines Edition. Gameboard dimensions: 28cm x 28cm.',
+      'Monopoly and Singapore Airlines have teamed up to create an exclusive travel-sized version of the world’s most loved family board game. Enjoy your flight with us and have fun in a game of Monopoly: Singapore Airlines Edition.',
     miles: 8125,
     dollars: 65,
     cover: '/images/monopoly.jpg',

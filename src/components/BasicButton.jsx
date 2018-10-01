@@ -10,6 +10,7 @@ const BasicButton = styled('button')`
   background: none;
   outline: none;
   cursor: pointer;
+  text-align: left;
 `
 
 export default BasicButton

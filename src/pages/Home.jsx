@@ -1,19 +1,20 @@
+import { navigate } from '@reach/router'
 import React from 'react'
+import { css } from 'react-emotion'
+import ActionButton from '../components/ActionButton'
+import BasicLink from '../components/BasicLink'
+import Caption from '../components/Caption'
+import CardsRow from '../components/CardsRow'
+import Expanded from '../components/Expanded'
+import Frame from '../components/Frame'
+import HeaderBanner from '../components/HeaderBanner'
 import Icon from '../components/Icon'
 import Layout from '../components/Layout'
-import HeaderBanner from '../components/HeaderBanner'
-import SearchBar from '../components/SearchBar'
-import Row from '../components/Row'
-import { css } from 'react-emotion'
 import Main from '../components/Main'
-import { products } from '../helpers/products'
-import CardsRow from '../components/CardsRow'
 import Nav from '../components/Nav'
+import Row from '../components/Row'
 import { games } from '../helpers/games'
-import Caption from '../components/Caption'
-import Frame from '../components/Frame'
-import { navigate } from '@reach/router'
-import BasicLink from '../components/BasicLink'
+import { products } from '../helpers/products'
 
 const Section = ({ heading, items, padding, itemLinkPrefix = '/' }) => (
   <div>
@@ -42,7 +43,12 @@ const Home = () => (
     </Caption>
     <Frame>
       <HeaderBanner />
-      <SearchBar />
+      <ActionButton>
+        <Row>
+          <Expanded>Search</Expanded>
+          <Icon>search</Icon>
+        </Row>
+      </ActionButton>
       <Main>
         <Section heading="Shopping" items={Object.values(products)} itemLinkPrefix="/products/" />
         <Section
