@@ -45,8 +45,8 @@ const Card = ({
         padding: ${padding ? 0 : '0 16px 16px 16px'};
       `}
     >
-      {dollars && `$ ${dollars} / `}
       {miles} miles
+      {dollars && ` / $ ${dollars}`}
     </div>
   </div>
 )

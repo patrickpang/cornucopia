@@ -27,8 +27,14 @@ const ProductDetails = ({ id }) => {
         <ProductBanner product={product} />
         <ActionButton theme="orange">
           <Row>
-            <Expanded>Add To Cart</Expanded>
             <Icon>add_shopping_cart</Icon>
+            <Expanded
+              className={css`
+                text-align: center;
+              `}
+            >
+              Add To Cart
+            </Expanded>
           </Row>
         </ActionButton>
         <div

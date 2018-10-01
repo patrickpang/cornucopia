@@ -22,7 +22,7 @@ const CardsRow = ({ items, padding, onCardClick = () => null }) => (
         key={item.id}
         className={css`
           flex-shrink: 0;
-          width: 120px;
+          width: 150px;
         `}
         padding={padding}
         onClick={onCardClick}
