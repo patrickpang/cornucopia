@@ -5,11 +5,13 @@ import BasicButton from './BasicButton'
 const backgroundColor = {
   simple: 'white',
   orange: 'linear-gradient(45deg, #fc4a1a, #f7b733)',
+  violet: 'linear-gradient(45deg, #3f5efb, #fc466b)',
 }
 
 const textColor = {
   simple: 'black',
   orange: 'white',
+  violet: 'white',
 }
 
 const ActionButton = ({ children, theme = 'simple' }) => (

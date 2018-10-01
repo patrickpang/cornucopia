@@ -1,6 +1,5 @@
 import { navigate } from '@reach/router'
 import React from 'react'
-import { css } from 'react-emotion'
 import ActionButton from '../components/ActionButton'
 import BasicLink from '../components/BasicLink'
 import Caption from '../components/Caption'
@@ -19,13 +18,11 @@ import { products } from '../helpers/products'
 const Section = ({ heading, items, padding, itemLinkPrefix = '/' }) => (
   <div>
     <Row>
-      <h2
-        className={css`
-          flex: 1;
-        `}
-      >
-        {heading}
-      </h2>
+      <Expanded>
+        <BasicLink to={itemLinkPrefix}>
+          <h2>{heading}</h2>
+        </BasicLink>
+      </Expanded>
       <Row>
         <BasicLink to={itemLinkPrefix}>MORE</BasicLink>
         <Icon>keyboard_arrow_right</Icon>

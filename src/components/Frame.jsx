@@ -2,6 +2,7 @@ import styled from 'react-emotion'
 
 const Frame = styled('div')`
   @media screen and (orientation: portrait) {
+    height: 100vh;
   }
 
   @media screen and (orientation: landscape) {

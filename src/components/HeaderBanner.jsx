@@ -4,6 +4,7 @@ import Icon from './Icon'
 import { css } from 'react-emotion'
 import Row from './Row'
 import { navigate } from '@reach/router'
+import Expanded from './Expanded'
 
 const HeaderBanner = () => (
   <div
@@ -20,13 +21,9 @@ const HeaderBanner = () => (
       padding-bottom: 8px;
     `}
   >
-    <div
-      className={css`
-        flex: 1;
-      `}
-    >
+    <Expanded>
       <Header />
-    </div>
+    </Expanded>
     <div
       className={css`
         padding: 32px;

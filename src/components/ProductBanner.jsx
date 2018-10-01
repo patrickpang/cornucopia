@@ -5,6 +5,34 @@ import Header from './Header'
 import ProgressBar from './ProgressBar'
 import Row from './Row'
 
+const ProductBanner = ({ product: { name, cover, miles, dollars } }) => (
+  <div>
+    <Header simple />
+    <div
+      className={css`
+        padding: 0 32px 16px 32px;
+      `}
+    >
+      <h2>{name}</h2>
+      <div
+        className={css`
+          text-align: center;
+        `}
+      >
+        <BasicImage
+          src={cover}
+          alt={name}
+          className={css`
+            max-height: 30vh;
+            width: auto;
+          `}
+        />
+        <PriceTag miles={miles} dollars={dollars} discount={0.1} purchases={13} />
+      </div>
+    </div>
+  </div>
+)
+
 const PriceTag = ({ miles, dollars, discount, purchases }) => (
   <div>
     <div
@@ -44,34 +72,6 @@ const PriceTag = ({ miles, dollars, discount, purchases }) => (
         </div>
       </Row>
       <p>{15 - purchases} more purchases to get 15% off</p>
-    </div>
-  </div>
-)
-
-const ProductBanner = ({ product: { name, description, cover, miles, dollars } }) => (
-  <div>
-    <Header simple />
-    <div
-      className={css`
-        padding: 0 32px 16px 32px;
-      `}
-    >
-      <h2>{name}</h2>
-      <div
-        className={css`
-          text-align: center;
-        `}
-      >
-        <BasicImage
-          src={cover}
-          alt={name}
-          className={css`
-            max-height: 30vh;
-            width: auto;
-          `}
-        />
-        <PriceTag miles={miles} dollars={dollars} discount={0.1} purchases={13} />
-      </div>
     </div>
   </div>
 )
