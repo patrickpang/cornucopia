@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import ProductBanner from '../components/ProductBanner'
 import Row from '../components/Row'
 import { products } from '../helpers/products'
+import Paragraph from '../components/Paragraph'
 
 const ProductDetails = ({ id }) => {
   const product = products[id]
@@ -42,7 +43,7 @@ const ProductDetails = ({ id }) => {
             padding: 32px;
           `}
         >
-          <div>{description}</div>
+          <Paragraph>{description}</Paragraph>
         </div>
       </Frame>
     </Layout>

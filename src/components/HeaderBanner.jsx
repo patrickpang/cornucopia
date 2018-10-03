@@ -5,18 +5,16 @@ import { css } from 'react-emotion'
 import Row from './Row'
 import { navigate } from '@reach/router'
 import Expanded from './Expanded'
+import Column from './Column'
 
 const HeaderBanner = () => (
-  <div
+  <Column
     onClick={() => navigate('/profile')}
     className={css`
       background: url(/images/singapore.jpg);
       background-size: cover;
       color: white;
       cursor: pointer;
-
-      display: flex;
-      flex-direction: column;
       height: 280px;
       padding-bottom: 8px;
     `}
@@ -56,10 +54,10 @@ const HeaderBanner = () => (
         >
           access_time
         </Icon>
-        <span>1 h 30 m left</span>
+        <span>1 h 30 m remaining</span>
       </Row>
     </div>
-  </div>
+  </Column>
 )
 
 export default HeaderBanner

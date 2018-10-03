@@ -1,12 +1,12 @@
 import React from 'react'
 import { css } from 'react-emotion'
 import Card from './Card'
+import Box from './Box'
+import Row from './Row'
 
 const CardsRow = ({ items, padding, onCardClick = () => null }) => (
-  <div
+  <Row
     className={css`
-      display: flex;
-      flex-direction: row;
       overflow-x: auto;
       padding: 16px 32px;
       margin: 0 -32px;
@@ -28,7 +28,8 @@ const CardsRow = ({ items, padding, onCardClick = () => null }) => (
         onClick={onCardClick}
       />
     ))}
-  </div>
+    <Box width={32} />
+  </Row>
 )
 
 export default CardsRow

@@ -8,10 +8,10 @@ const backgroundColor = {
   violet: 'linear-gradient(45deg, #3f5efb, #fc466b)',
 }
 
-const textColor = {
-  simple: 'black',
-  orange: 'white',
-  violet: 'white',
+const textTheme = {
+  simple: 'dark',
+  orange: 'light',
+  violet: 'light',
 }
 
 const ActionButton = ({ children, theme = 'simple' }) => (
@@ -24,11 +24,11 @@ const ActionButton = ({ children, theme = 'simple' }) => (
       margin-bottom: -20px;
       margin-left: auto;
       margin-right: auto;
-      color: ${textColor[theme]};
+      color: ${textTheme[theme] === 'dark' ? 'black' : 'white'};
       background: ${backgroundColor[theme]};
       padding: 12px 20px;
       border-radius: 24px;
-      box-shadow: 0 0 20px 0 lightgrey;
+      box-shadow: 0 0 20px 0 ${textTheme[theme] === 'dark' ? 'lightgrey' : 'grey'};
     `}
   >
     {children}

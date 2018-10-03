@@ -1,6 +1,8 @@
 import React from 'react'
 import { css, cx } from 'react-emotion'
 import BasicImage from './BasicImage'
+import Column from './Column'
+import Expanded from './Expanded'
 
 const Card = ({
   item: { id, name, cover, dollars, miles },
@@ -8,13 +10,11 @@ const Card = ({
   onClick = () => null,
   padding = true,
 }) => (
-  <div
+  <Column
     onClick={() => onClick(id)}
     className={cx(
       className,
       css`
-        display: flex;
-        flex-direction: column;
         cursor: pointer;
         border-radius: 12px;
         box-shadow: 0px 0px 16px lightgrey;
@@ -30,14 +30,13 @@ const Card = ({
       src={cover}
       alt={name}
     />
-    <div
+    <Expanded
       className={css`
-        flex: 1;
         padding: ${padding ? 0 : '16px 16px 0 16px'};
       `}
     >
       {name}
-    </div>
+    </Expanded>
     <div
       className={css`
         margin-top: 8px;
@@ -48,7 +47,7 @@ const Card = ({
       {miles} miles
       {dollars && ` / $ ${dollars}`}
     </div>
-  </div>
+  </Column>
 )
 
 export default Card
