@@ -13,9 +13,9 @@ const InfoCard = ({ heading, children }) => (
   <div
     className={css`
       background: rgba(0, 0, 0, 0.7);
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0px 0px 8px black;
-      padding: 24px;
+      padding: 32px 24px;
       margin-bottom: 32px;
     `}
   >
@@ -33,9 +33,34 @@ const InfoCard = ({ heading, children }) => (
 )
 
 const CardAction = styled('div')`
-  margin-top: 16px;
+  margin-top: 32px;
   text-align: right;
 `
+
+const Timeline = () => (
+  <div
+    className={css`
+      padding-top: 8px;
+    `}
+  >
+    <Destination icon="business" name="Gardens by the Bay" />
+    <Destination icon="business" name="Kampong Glam" />
+    <Destination icon="business" name="Tiong Bahru Estate" />
+    <Destination icon="restaurant" name="Lau Pa Sat" />
+    <Destination icon="hotel" name="Marine Bay Sands" />
+  </div>
+)
+
+const Destination = ({ icon, name }) => (
+  <Row
+    className={css`
+      margin: 8px;
+    `}
+  >
+    <Icon left>{icon}</Icon>
+    <div>{name}</div>
+  </Row>
+)
 
 const Profile = () => (
   <Layout>
@@ -53,48 +78,64 @@ const Profile = () => (
         color: white;
       `}
     >
-      <Header simple />
       <div
         className={css`
-          padding: 32px;
-          padding-top: 0;
+          height: 100%;
+          overflow-y: auto;
         `}
       >
-        <h2>Welcome, Patrick</h2>
-        <InfoCard heading="MY MILES">
-          <div>55,700 miles</div>
-          <CardAction>
-            <BasicButton>
-              <Row>
-                <span>Top-up miles</span>
-                <Icon>keyboard_arrow_right</Icon>
-              </Row>
-            </BasicButton>
-          </CardAction>
-        </InfoCard>
-        <InfoCard heading="FLIGHT">
-          <Row>
-            <Icon
-              className={css`
-                margin-right: 8px;
-              `}
-            >
-              access_time
-            </Icon>
-            <span>1 h 30 m remaining</span>
-          </Row>
-          <CardAction>
-            <BasicButton>
-              <Row>
-                <span>Dietary Preferences</span>
-                <Icon>keyboard_arrow_right</Icon>
-              </Row>
-            </BasicButton>
-          </CardAction>
-        </InfoCard>
-        <InfoCard heading="MY TRIP">
-          <div>Singapore Trip</div>
-        </InfoCard>
+        <Header simple />
+        <div
+          className={css`
+            padding: 32px;
+            padding-top: 0;
+          `}
+        >
+          <h2>Welcome, Patrick</h2>
+
+          <InfoCard heading="My Miles">
+            <Row>
+              <Icon left>flight_takeoff</Icon>
+              <span>55,700 miles</span>
+            </Row>
+            <CardAction>
+              <BasicButton>
+                <Row>
+                  <span>Top-up</span>
+                  <Icon>keyboard_arrow_right</Icon>
+                </Row>
+              </BasicButton>
+            </CardAction>
+          </InfoCard>
+
+          <InfoCard heading="My Flight">
+            <Row>
+              <Icon left>access_time</Icon>
+              <span>1 h 30 m remaining</span>
+            </Row>
+            <CardAction>
+              <BasicButton>
+                <Row>
+                  <span>Preferences</span>
+                  <Icon>keyboard_arrow_right</Icon>
+                </Row>
+              </BasicButton>
+            </CardAction>
+          </InfoCard>
+
+          <InfoCard heading="My Trip">
+            <Timeline />
+
+            <CardAction>
+              <BasicButton>
+                <Row>
+                  <span>Details</span>
+                  <Icon>keyboard_arrow_right</Icon>
+                </Row>
+              </BasicButton>
+            </CardAction>
+          </InfoCard>
+        </div>
       </div>
     </Frame>
   </Layout>

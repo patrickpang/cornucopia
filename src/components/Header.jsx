@@ -13,13 +13,7 @@ const Header = ({ simple = false }) => (
   >
     {!simple && (
       <Row>
-        <Icon
-          className={css`
-            margin-right: 8px;
-          `}
-        >
-          airplanemode_active
-        </Icon>
+        <Icon left>airplanemode_active</Icon>
         <span
           className={css`
             font-size: 20px;
@@ -36,13 +30,7 @@ const Header = ({ simple = false }) => (
     )}
     <Row>
       <span>55,700 miles</span>
-      <Icon
-        className={css`
-          margin-left: 8px;
-        `}
-      >
-        person
-      </Icon>
+      <Icon right>person</Icon>
     </Row>
   </Row>
 )

@@ -46,7 +46,7 @@ const GameDetails = ({ id }) => {
         `}
       >
         <GameBanner game={game} />
-        <ActionButton theme="violet">
+        <ActionButton theme="violet" shadow="grey">
           <Row>
             <Icon>play_arrow</Icon>
             <Expanded

@@ -47,13 +47,7 @@ const HeaderBanner = () => (
           font-size: 16px;
         `}
       >
-        <Icon
-          className={css`
-            margin-right: 8px;
-          `}
-        >
-          access_time
-        </Icon>
+        <Icon left>access_time</Icon>
         <span>1 h 30 m remaining</span>
       </Row>
     </div>
